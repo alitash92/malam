@@ -56,6 +56,12 @@ From §2 of the GDD, and they are the reason this is publishable at all:
 - Run the KAMLA-similarity check across title, story, setting, pursuer, ritual, items,
   UI and marketing **before** anything is announced. This repo stays private until then.
 
+## Background reading
+
+`docs/SESSION-TRANSCRIPT.md` is the export of the session this code was written
+in — every instruction, decision and correction, in order. Read it if you need to
+know *why* something is the way it is. Credentials in it are redacted.
+
 ## Verified vs assumed
 
 CI (`.github/workflows/build.yml`) typechecks and builds on every push, so "it
