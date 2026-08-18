@@ -1,0 +1,17 @@
+name: typecheck
+on:
+  push:
+  workflow_dispatch:
+
+# `npm run build` is deliberately not run yet: the vertical slice has no
+# index.html/main.ts, so vite would fail. Add the build step with world.ts.
+jobs:
+  typecheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install
+      - run: npx tsc --noEmit
