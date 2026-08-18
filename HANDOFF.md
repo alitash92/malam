@@ -1,5 +1,11 @@
 # MALAM — handoff
 
+Repo: **https://github.com/alitash92/malam**
+
+- GDD: [`docs/MALAM_The_Thirteenth_Call_Game_Design_and_Script.docx`](docs/MALAM_The_Thirteenth_Call_Game_Design_and_Script.docx)
+- Build session transcript: [`docs/SESSION-TRANSCRIPT.md`](docs/SESSION-TRANSCRIPT.md)
+- Overview: [`README.md`](README.md)
+
 Read this first if you are picking this up in a **cloud session** (Claude Code web,
 or a Codespace). Everything needed is in this repo.
 
