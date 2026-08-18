@@ -1,0 +1,21 @@
+{
+  "name": "malam",
+  "private": true,
+  "version": "0.1.0",
+  "description": "MALAM: The Thirteenth Call \u2014 greybox vertical slice (Arrival to Call 4)",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.185.4",
+    "typescript": "^5.9.2",
+    "vite": "^7.0.6"
+  }
+}
