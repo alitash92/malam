@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="theme-color" content="#05070a" />
+    <title>MALAM — The Thirteenth Call</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <canvas id="scene"></canvas>
+    <div id="vignette"></div>
+
+    <div id="hud" hidden>
+      <p id="objective"></p>
+
+      <div id="meters">
+        <div class="meter">
+          <span>HUNT · <i id="hunt-state">listening</i></span>
+          <div class="bar"><i id="hunt-fill" data-band="calm"></i></div>
+        </div>
+        <div class="meter">
+          <span>TORCH</span>
+          <div class="bar"><i id="torch-fill"></i></div>
+        </div>
+      </div>
+
+      <ul id="evidence"></ul>
+      <p id="prompt" hidden></p>
+
+      <div id="subtitle">
+        <b id="sub-speaker"></b>
+        <span id="sub-text"></span>
+      </div>
+
+      <!-- Touch controls: left pad walks, right of screen looks. Designed for
+           phones, because the game is slow enough not to need reflexes. -->
+      <div id="touch">
+        <div id="stick"><i></i></div>
+        <div id="buttons">
+          <button data-touch="interact">USE</button>
+          <button data-touch="crank">CRANK</button>
+          <button data-touch="crouch">CROUCH</button>
+        </div>
+      </div>
+    </div>
+
+    <section id="intro">
+      <p class="kicker">KAMPUNG SERI BAYU · PERAK · 1998</p>
+      <h1>MALAM</h1>
+      <p class="sub">THE THIRTEENTH CALL</p>
+      <p class="line">
+        Dua belas panggilan adalah bukti. Yang ketiga belas jangan sekali dijawab.<br />
+        <em>Twelve calls are evidence. Never answer the thirteenth.</em>
+      </p>
+      <ul class="keys">
+        <li><b>WASD</b> walk · <b>Mouse</b> look · <b>C</b> crouch</li>
+        <li><b>E</b> use · <b>F</b> crank the torch · <b>R</b> restart</li>
+        <li>On a phone: left pad walks, drag the right side to look.</li>
+      </ul>
+      <label class="opt"><input type="checkbox" id="reduced" /> Reduced sudden audio</label>
+      <button id="begin">MASUK — ENTER THE COMPOUND</button>
+      <p class="foot">Vertical slice: Arrival → Surau → Caretaker House → generator → Call 4.</p>
+    </section>
+
+    <section id="caught" hidden>
+      <h2>IA MENEMUI KAMU</h2>
+      <p id="caught-line">It found you. Nothing was taken — only time.</p>
+      <button id="resume">BANGUN — GET UP</button>
+    </section>
+
+    <section id="end" hidden>
+      <h2>CALL 4 RECORDED</h2>
+      <p>
+        Four calls on tape. Eight more are out there, and the thirteenth circuit
+        is still waiting for a name.
+      </p>
+      <p class="foot">End of vertical slice — archive, cemetery and exchange are not built yet.</p>
+      <button id="again">MAIN LAGI — RUN IT BACK</button>
+    </section>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
