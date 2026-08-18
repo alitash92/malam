@@ -1,12 +1,12 @@
-name: typecheck
+name: build
 on:
   push:
   workflow_dispatch:
 
-# `npm run build` is deliberately not run yet: the vertical slice has no
-# index.html/main.ts, so vite would fail. Add the build step with world.ts.
+# Everything is built and typechecked on GitHub's machines. Nothing needs a
+# local toolchain — that is the point.
 jobs:
-  typecheck:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -14,4 +14,12 @@ jobs:
         with:
           node-version: 22
       - run: npm install
-      - run: npx tsc --noEmit
+      - name: Typecheck
+        run: npx tsc --noEmit
+      - name: Build
+        run: npx vite build
+      - name: Upload playable build
+        uses: actions/upload-artifact@v4
+        with:
+          name: malam-slice-${{ github.sha }}
+          path: dist
